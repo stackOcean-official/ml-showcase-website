@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 350 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:square;">
+    <g transform="matrix(1,0,0,1,-64,-32)">
+        <g id="icon">
+            <g id="Group">
+                <clipPath id="_clip1">
+                    <rect x="84.847" y="46.369" width="307.538" height="174.437"/>
+                </clipPath>
+                <g clip-path="url(#_clip1)">
+                    <g id="Group1" serif:id="Group" transform="matrix(-0.999848,-0.0174524,-0.0174524,0.999848,378.826,64.1217)">
+                        <g id="Line-4-Copy" transform="matrix(0.999391,0.0348995,-0.0348995,0.999391,3.55049,-4.71727)">
+                            <path d="M1.848,74.888C35.559,52.708 64.031,50.774 87.263,69.085C122.11,96.553 143.819,142.748 185.78,142.018C213.754,141.531 242.479,117.434 271.955,69.728" style="fill:none;stroke:rgb(184,231,237);stroke-width:14.4px;"/>
+                        </g>
+                        <g id="Line-2" transform="matrix(0.99863,0.052336,0.052336,-0.99863,-3.05972,116.846)">
+                            <path d="M7.678,58.481C31.362,94.994 56.268,107.911 82.396,97.232C121.589,81.213 138.913,34.267 182.902,25.134C212.228,19.045 241.213,28.43 269.858,53.29" style="fill:none;stroke:rgb(128,203,210);stroke-width:14.4px;"/>
+                        </g>
+                        <g id="Line-4-Copy1" serif:id="Line-4-Copy" transform="matrix(1,0,0,-1,0,85.4568)">
+                            <path d="M2.268,18.284C35.981,-3.9 64.453,-5.837 87.683,12.472C122.528,39.936 144.231,86.129 186.192,85.394C214.166,84.904 243.922,61.71 275.461,15.81" style="fill:none;stroke:rgb(77,186,197);stroke-width:14.4px;"/>
+                        </g>
+                        <path id="Line-21" serif:id="Line-2" d="M2.109,69.716C29.444,109.764 56.174,124.45 82.301,113.775C121.49,97.762 138.806,50.82 182.793,41.693C212.118,35.609 242.969,45.609 275.347,71.691" style="fill:none;stroke:rgb(17,148,162);stroke-width:14.4px;"/>
+                        <g id="Line-4-Copy-2" transform="matrix(1,0,0,-1,0,152.292)">
+                            <path d="M2.096,85.355C35.924,63.014 64.453,60.998 87.683,79.307" style="fill:none;stroke:rgb(77,186,197);stroke-width:14.4px;"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
