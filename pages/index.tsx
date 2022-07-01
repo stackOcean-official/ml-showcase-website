@@ -38,16 +38,16 @@ const HomePage: NextPage = () => {
                 <div className="max-w-sm mx-auto mt-10 sm:max-w-none sm:flex sm:justify-center">
                   <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
                     <a
-                      href="#"
+                      href="#usecases"
                       className="flex items-center justify-center px-4 py-3 text-base font-medium bg-white border border-transparent rounded-md shadow-sm text-ocean-700 hover:bg-ocean-50 sm:px-8"
                     >
                       Mehr erfahren
                     </a>
                     <a
-                      href="#"
+                      href="#usecases"
                       className="flex items-center justify-center px-4 py-3 text-base font-medium text-white border border-transparent rounded-md shadow-sm bg-ocean-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
                     >
-                      Zu den Showcases
+                      Zu den Usecases
                     </a>
                   </div>
                 </div>
@@ -81,7 +81,9 @@ const HomePage: NextPage = () => {
           </div>
         </div>
 
-        <Usecases />
+        <div id="usecases">
+          <Usecases />
+        </div>
 
         <CallToAction />
       </main>

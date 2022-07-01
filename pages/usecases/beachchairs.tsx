@@ -1,17 +1,26 @@
 import Link from "next/link";
+import { useState } from "react";
+import dynamic from "next/dynamic";
 import { AiFillGithub } from "react-icons/ai";
 import Footer from "../../components/layout/Footer";
 import Navigation from "../../components/layout/Navigation";
 import CallToAction from "../../components/shared/CallToAction";
+import { classNames } from "../../lib/utils";
+
+const views = [
+  { id: "demo", name: "Interaktive Demo" },
+  { id: "dataset", name: "Datensatz Auszug" },
+];
 
 export default function BeachchairsPage({}) {
+  const [activeView, setActiveView] = useState(views[0].id);
   return (
     <div>
       <Navigation />
       <div className="relative">
         <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
           <div className="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
-            <h1 className="text-3xl tracking-tight text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-ocean-600 to-teal-600 xl:inline sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl">
+            <h1 className="text-3xl tracking-tight text-transparent font-extrabold bg-clip-text bg-gradient-to-r from-ocean-700 to-cyan-600 xl:inline sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl">
               Strandkorb-Buchungsvorhersage
             </h1>
             <p className="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
@@ -22,7 +31,7 @@ export default function BeachchairsPage({}) {
             <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow">
                 <a
-                  href="#"
+                  href="#demo"
                   className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-ocean-600 hover:bg-ocean-700 md:py-4 md:text-lg md:px-10"
                 >
                   Live-Demo
@@ -52,45 +61,69 @@ export default function BeachchairsPage({}) {
           <div className="absolute inset-0 bg-gradient-to-r from-ocean-500 to-teal-600 mix-blend-multiply" />
         </div>
       </div>
-      <div className="bg-white py-16 sm:py-24">
-        <div className="relative sm:py-16">
-          <div aria-hidden="true" className="hidden sm:block">
-            <div className="absolute inset-y-0 left-0 w-1/2 bg-gray-50 rounded-r-3xl" />
-            <svg
-              className="absolute top-8 left-1/2 -ml-3"
-              width={404}
-              height={392}
-              fill="none"
-              viewBox="0 0 404 392"
-            >
-              <defs>
-                <pattern
-                  id="8228f071-bcee-4ec8-905a-2a059a2cc4fb"
-                  x={0}
-                  y={0}
-                  width={20}
-                  height={20}
-                  patternUnits="userSpaceOnUse"
-                >
-                  <rect
-                    x={0}
-                    y={0}
-                    width={4}
-                    height={4}
-                    className="text-gray-200"
-                    fill="currentColor"
-                  />
-                </pattern>
-              </defs>
-              <rect
-                width={404}
-                height={392}
-                fill="url(#8228f071-bcee-4ec8-905a-2a059a2cc4fb)"
-              />
-            </svg>
+
+      {/* Interactive Demo */}
+      <div className="bg-gray-50 py-12">
+        <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+          {/* views */}
+          <div className="mx-auto max-w-7xl w-full py-10">
+            <div className="sm:hidden">
+              <label htmlFor="views" className="sr-only">
+                Select a view
+              </label>
+              {/* Use an "onChange" listener to redirect the user to the selected view URL. */}
+              <select
+                id="views"
+                name="views"
+                className="block w-full focus:ring-ocean-500 focus:border-ocean-500 border-gray-300 rounded-md"
+                defaultValue={
+                  views.find((view) => activeView === view.id)?.name
+                }
+              >
+                {views.map((view) => (
+                  <option key={view.name}>{view.name}</option>
+                ))}
+              </select>
+            </div>
+            <div className="hidden sm:block">
+              <nav
+                className="relative z-0 rounded-lg shadow flex divide-x divide-gray-200"
+                aria-label="views"
+              >
+                {views.map((view, viewIdx) => (
+                  <button
+                    key={view.name}
+                    onClick={() => setActiveView(view.id)}
+                    className={classNames(
+                      view.id === activeView
+                        ? "text-gray-900"
+                        : "text-gray-500 hover:text-gray-700",
+                      viewIdx === 0 ? "rounded-l-lg" : "",
+                      viewIdx === views.length - 1 ? "rounded-r-lg" : "",
+                      "group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10"
+                    )}
+                    aria-current={view.id === activeView ? "page" : undefined}
+                  >
+                    <span>{view.name}</span>
+                    <span
+                      aria-hidden="true"
+                      className={classNames(
+                        view.id === activeView
+                          ? "bg-ocean-500"
+                          : "bg-transparent",
+                        "absolute inset-x-0 bottom-0 h-0.5"
+                      )}
+                    />
+                  </button>
+                ))}
+              </nav>
+            </div>
           </div>
-          <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-            <div className="relative rounded-2xl px-6 py-10 bg-white overflow-hidden shadow-xl sm:px-12 sm:py-20">
+          {activeView === "demo" ? (
+            <div
+              className="relative rounded-2xl px-6 py-10 bg-white overflow-hidden shadow-xl sm:px-12 sm:py-20"
+              id="demo"
+            >
               <div
                 aria-hidden="true"
                 className="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0"
@@ -123,7 +156,9 @@ export default function BeachchairsPage({}) {
                 ></iframe>
               </div>
             </div>
-          </div>
+          ) : activeView === "dataset" ? (
+            <div className="relative rounded-2xl px-6 py-10 bg-white overflow-hidden shadow-xl sm:px-12 sm:py-20"></div>
+          ) : null}
         </div>
       </div>
       <CallToAction />
