@@ -272,7 +272,10 @@ export default function BeachchairsPage({}) {
                   Produktionsvorhersagen für eine Bäckerei (Vorhersage der
                   verkauften Brötchen)
                 </li>
-                <li>Anzahl Servicekräfte für ein Restaurant oder Biergarten</li>
+                <li>
+                  Anzahl benötigter Servicekräfte für ein Restaurant oder
+                  Biergarten
+                </li>
                 <li>...</li>
               </ul>
             </div>
