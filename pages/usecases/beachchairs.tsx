@@ -16,7 +16,7 @@ const CsvToHtmlTable: any = dynamic(
 );
 import { data } from "../../misc/beachchair_data";
 
-const sampleData = `
+const sampleData = `// @ts-ignore
 Model,mpg,cyl,disp,hp,drat,wt,qsec,vs,am,gear,carb
 Mazda RX4,21,6,160,110,3.9,2.62,16.46,0,1,4,4
 Mazda RX4 Wag,21,6,160,110,3.9,2.875,17.02,0,1,4,4
@@ -111,12 +111,12 @@ export default function BeachchairsPage({}) {
                 Für eine Strandkorbvermietung bedeutet die Vorbereitung der
                 Strandkörbe für den nächsten Tag viel Arbeit. Die Strandkörbe
                 müssen aus dem trockenen Lager an den Strand transportiert und
-                vorbereit werden. Werden zu wenige Strandkörbe für den kommenden
-                Tag vorbereit, und kommen wegen dem guten Wetter viele Kunden an
-                den Strand, müssen einzelne Kunden abgewiesen werden. Werden zu
-                viele Strandkörbe vorbereitet, bedeutet das unnötigen zeitlichen
-                Aufwand am Vortag sowie zusätzlichen Verschleiß der Strandkörbe
-                durch Witterung.
+                vorbereitet werden. Werden zu wenige Strandkörbe für den
+                kommenden Tag vorbereitet, und kommen wegen dem guten Wetter
+                viele Kunden an den Strand, müssen einzelne Kunden abgewiesen
+                werden. Werden zu viele Strandkörbe vorbereitet, bedeutet das
+                unnötigen zeitlichen Aufwand am Vortag sowie zusätzlichen
+                Verschleiß der Strandkörbe durch Witterung.
               </p>
             </div>
           </div>
@@ -127,7 +127,7 @@ export default function BeachchairsPage({}) {
                   Die Lösung
                 </span>
                 <span className="block mt-2 text-3xl font-bold leading-8 tracking-tight text-center text-gray-900 sm:text-4xl">
-                  Vorhersage mit Hilfe von KI
+                  Vorhersage der Nachfrage mit Hilfe von KI
                 </span>
               </h2>
             </div>
@@ -138,13 +138,14 @@ export default function BeachchairsPage({}) {
                 Wetter, insbesondere Sonnenstunden und Windgeschwindigkeit,
                 sowie der Wochentag, aber auch Faktoren wie Schulferien in der
                 Region einen Einfluss. Mit Hilfe von historischen Daten zu
-                diesen Bedingungen Tagen in der Vergangenheit sowie der Anzahl
-                der an diesem Tag vermieteten Strandkörbe, lässt sich ein
+                diesen Bedingungen an Tagen in der Vergangenheit sowie der
+                Anzahl der an diesem Tag vermieteten Strandkörbe, lässt sich ein
                 statistisches Modell trainieren.
                 <br />
                 <br /> Zu Illustration haben wir einen fiktiven Datensatz
                 erstellt, der zeigt, wie ein Machine-Learning-Algoritmus dieses
-                Problem lösen kann.
+                Problem lösen kann. Die Logik kann aber 1-zu-1 mit einem realen
+                Datensatz übernommen werden.
               </p>
             </div>
           </div>
@@ -153,7 +154,7 @@ export default function BeachchairsPage({}) {
           <div className="w-full py-10 mx-auto max-w-7xl">
             <div className="sm:hidden">
               <label htmlFor="views" className="sr-only">
-                Select a view
+                Ansicht wählen
               </label>
               {/* Use an "onChange" listener to redirect the user to the selected view URL. */}
               <select
