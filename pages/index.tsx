@@ -62,20 +62,29 @@ const HomePage: NextPage = () => {
             <p className="text-sm font-semibold tracking-wide text-center text-gray-500 uppercase">
               Vertraut und unterstützt von
             </p>
-            <div className="inline-flex space-x-12 justify-center w-full mt-6">
+            <div className="inline-flex justify-center w-full mt-6 space-x-12">
               <div className="flex justify-center col-span-1 md:col-span-2 lg:col-span-1">
-                <img
-                  className="h-16"
-                  src="/img/sh-logo.png"
-                  alt="Schleswig-Holstein"
-                />
+                <a
+                  href="https://www.schleswig-holstein.de/DE/landesregierung/themen/digitalisierung/kuenstliche-intelligenz/kuenstliche_intelligenz_node.html"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    className="h-16"
+                    src="/img/sh-logo.png"
+                    alt="Schleswig-Holstein"
+                  />
+                </a>
               </div>
               <div className="flex justify-center col-span-1 md:col-span-2 lg:col-span-1">
-                <img
-                  className="h-8"
-                  src="/img/kiel-ai-logo.png"
-                  alt="Kiel.AI"
-                />
+                {" "}
+                <a href="https://kiel.ai" target="_blank" rel="noreferrer">
+                  <img
+                    className="h-8"
+                    src="/img/kiel-ai-logo.png"
+                    alt="Kiel.AI"
+                  />
+                </a>
               </div>
             </div>
           </div>
