@@ -2,7 +2,7 @@
 const posts = [
   {
     title: "Strandkorb-Buchungsvorhersage",
-    href: "/usecases/beachchairs",
+    href: "/usecases/strandkorbvermietung",
     category: { name: "Interaktives Beispiel" },
     description:
       "Wie viele Strandkörbe muss eine Strandkorbvermietung für den nächsten Tag bereit halten? Anhand der Wettervorhersage und des Wochentags trifft dieses beispielhafte Modell vorhersagen.",

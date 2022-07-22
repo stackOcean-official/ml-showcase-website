@@ -15,6 +15,14 @@ const CsvToHtmlTable: any = dynamic(
   }
 );
 import { data } from "../../misc/beachchair_data";
+import Head from "next/head";
+
+const meta = {
+  title: "Strandkorb-Buchungsvorhersage",
+  description:
+    "Wie viele Strandkörbe muss eine Strandkorbvermietung für den nächsten Tag bereit halten? Anhand der Wettervorhersage und des Wochentags trifft dieses beispielhafte Modell vorhersagen.",
+  image: "https://ml.stackocean.com/img/beachchairs-social.jpeg",
+};
 
 const sampleData = `// @ts-ignore
 Model,mpg,cyl,disp,hp,drat,wt,qsec,vs,am,gear,carb
@@ -47,17 +55,22 @@ export default function BeachchairsPage({}) {
   const [activeView, setActiveView] = useState(views[0].id);
   return (
     <div>
+      <Head>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:image" content={meta.image} />
+      </Head>
       <Navigation />
       <div className="relative">
         <div className="w-full pt-16 pb-20 mx-auto text-center max-w-7xl lg:py-48 lg:text-left">
           <div className="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
             <h1 className="text-3xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-ocean-700 to-cyan-600 xl:inline sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl">
-              Strandkorb-Buchungsvorhersage
+              {meta.title}
             </h1>
             <p className="max-w-md mx-auto mt-3 text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
-              Wie viele Strandkörbe muss eine Strandkorbvermietung für den
-              nächsten Tag bereit halten? Anhand der Wettervorhersage und des
-              Wochentags trifft dieses beispielhafte Modell vorhersagen.
+              {meta.description}
             </p>
             <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
               <div className="rounded-md shadow">
