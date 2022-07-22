@@ -21,7 +21,7 @@ const meta = {
   title: "Strandkorb-Buchungsvorhersage",
   description:
     "Wie viele Strandkörbe muss eine Strandkorbvermietung für den nächsten Tag bereit halten? Anhand der Wettervorhersage und des Wochentags trifft dieses beispielhafte Modell vorhersagen.",
-  image: "https://ml.stackocean.com/img/beachchairs-social.jpeg",
+  image: "https://ml.stackocean.com/img/beachchairs-social.jpg",
 };
 
 const sampleData = `// @ts-ignore
