@@ -282,8 +282,8 @@ export default function BeachchairsPage({}) {
               </p>
               <ul className="text-left list-disc">
                 <li>
-                  Produktionsvorhersagen für eine Bäckerei (Vorhersage der
-                  verkauften Brötchen)
+                  Vorhersage von Besucherzahlen für Museen, Freizeitparks oder
+                  regelmäßige Events
                 </li>
                 <li>
                   Anzahl benötigter Servicekräfte für ein Restaurant oder
