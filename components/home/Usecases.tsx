@@ -9,6 +9,16 @@ const posts = [
     imageUrl:
       "https://images.unsplash.com/photo-1621540462628-a86e62126e70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1679&q=80&sat=-100",
   },
+
+  {
+    title: "Stimmungsanalyse",
+    href: "/usecases/stimmungsanalyse",
+    category: { name: "Interaktives Beispiel" },
+    description:
+      "Was denken meine Kunden über mich? Wie kann ich das Stimmungsbild automatisiert erfassen oder verärgerte Kunden speziell betreuen?",
+    imageUrl:
+      "https://images.unsplash.com/photo-1617440168937-c6497eaa8db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1679&q=80&sat=-100",
+  },
 ];
 
 export default function Usecases() {

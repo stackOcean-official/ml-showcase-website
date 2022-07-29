@@ -18,10 +18,11 @@ import { data } from "../../misc/beachchair_data";
 import Head from "next/head";
 
 const meta = {
-  title: "Strandkorb-Buchungsvorhersage",
+  title: "Stimmungsanalyse",
   description:
-    "Wie viele Strandkörbe muss eine Strandkorbvermietung für den nächsten Tag bereit halten? Anhand der Wettervorhersage und des Wochentags trifft dieses beispielhafte Modell vorhersagen.",
-  image: "https://ml.stackocean.com/img/beachchairs-social.jpg",
+    "Was denken meine Kunden über mich? Wie kann ich das Stimmungsbild automatisiert erfassen oder verärgerte Kunden speziell betreuen?",
+  image:
+    "https://images.unsplash.com/photo-1617440168937-c6497eaa8db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80&sat=-100",
 };
 
 const sampleData = `// @ts-ignore
@@ -46,10 +47,7 @@ Chrysler Imperial,14.7,8,440,230,3.23,5.345,17.42,0,0,3,4
 Fiat 128,32.4,4,78.7,66,4.08,2.2,19.47,1,1,4,1
 `;
 
-const views = [
-  { id: "demo", name: "Interaktive Demo" },
-  { id: "dataset", name: "Datensatz Auszug" },
-];
+const views = [{ id: "demo", name: "Interaktive Demo" }];
 
 export default function BeachchairsPage({}) {
   const [activeView, setActiveView] = useState(views[0].id);
@@ -82,7 +80,7 @@ export default function BeachchairsPage({}) {
                 </a>
               </div>
               <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                <Link href="https://github.com/stackOcean-official/python-streamlit-docker-sample">
+                <Link href="https://github.com/stackOcean-official/sentiment-showcase">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -99,7 +97,7 @@ export default function BeachchairsPage({}) {
         <div className="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
           <img
             className="absolute inset-0 object-cover w-full h-full"
-            src="https://images.unsplash.com/photo-1621540462628-a86e62126e70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2102&q=80&sat=-100"
+            src="https://images.unsplash.com/photo-1617440168937-c6497eaa8db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1679&q=80&sat=-100"
             alt=""
           />
           <div className="absolute inset-0 bg-gradient-to-r from-ocean-500 to-teal-600 mix-blend-multiply" />
@@ -115,21 +113,25 @@ export default function BeachchairsPage({}) {
                   Das Problem
                 </span>
                 <span className="block mt-2 text-3xl font-bold leading-8 tracking-tight text-center text-gray-900 sm:text-4xl">
-                  Ungewissheit und Einsparpotential
+                  Markt und Meinungsforschung
                 </span>
               </h2>
             </div>
             <div className="mx-auto mt-6 prose prose-lg text-center text-gray-500 prose-ocean ">
               <p>
-                Für eine Strandkorbvermietung bedeutet die Vorbereitung der
-                Strandkörbe für den nächsten Tag viel Arbeit. Die Strandkörbe
-                müssen aus dem trockenen Lager an den Strand transportiert und
-                vorbereitet werden. Werden zu wenige Strandkörbe für den
-                kommenden Tag vorbereitet, und kommen wegen dem guten Wetter
-                viele Kunden an den Strand, müssen einzelne Kunden abgewiesen
-                werden. Werden zu viele Strandkörbe vorbereitet, bedeutet das
-                unnötigen zeitlichen Aufwand am Vortag sowie zusätzlichen
-                Verschleiß der Strandkörbe durch Witterung.
+                Es ist für jedes Unternehmen wichtig sich einen Marktvorteil zu
+                erarbeiten. Dies kann zum Beispiel dadurch geschehen, dass ein
+                Unternehmen weiß, wie gut die eigenen Produkte oder die Produkte
+                der Konkurrenz angenommen werden.
+                <br />
+                Die öffentliche Meinung zu Produkten ist beispielsweise in
+                Textdaten, die auf Social-Media Plattformen wie Twitter,
+                Facebook und Reddit veröffentlicht werden, enthalten.
+                <br />
+                Bei so großen Mengen an Textdaten ist es absolut
+                unwirtschaftlich, diese Daten manuell auszuwerten. Allerdings
+                können diese Textdaten als Input für eine Stimmungs- oder auf
+                Englisch Sentiment-Analyse verwendet werden.
               </p>
             </div>
           </div>
@@ -140,25 +142,22 @@ export default function BeachchairsPage({}) {
                   Die Lösung
                 </span>
                 <span className="block mt-2 text-3xl font-bold leading-8 tracking-tight text-center text-gray-900 sm:text-4xl">
-                  Vorhersage der Nachfrage mit Hilfe von KI
+                  Stimmungsanalyse mit KI
                 </span>
               </h2>
             </div>
             <div className="mx-auto mt-6 prose prose-lg text-center text-gray-500 prose-ocean">
               <p>
-                Die Faktoren, woran sich die Nachfrage nach Strandkörben
-                richtet, lassen sich sehr präzise bestimmen. So haben das
-                Wetter, insbesondere Sonnenstunden und Windgeschwindigkeit,
-                sowie der Wochentag, aber auch Faktoren wie Schulferien in der
-                Region einen Einfluss. Mit Hilfe von historischen Daten zu
-                diesen Bedingungen an Tagen in der Vergangenheit sowie der
-                Anzahl der an diesem Tag vermieteten Strandkörbe, lässt sich ein
-                statistisches Modell trainieren.
+                Mit einer Stimmungsanalyse ist es möglich, enorme Mengen an
+                Textdaten von einem KI Modell in kurzer Zeit auswerten zu lassen
+                - eine Auswertung für die ein Mensch im Zweifel mehrere Monate
+                oder Jahre brauchen würde.
                 <br />
-                <br /> Zu Illustration haben wir einen fiktiven Datensatz
-                erstellt, der zeigt, wie ein Machine-Learning-Algoritmus dieses
-                Problem lösen kann. Die Logik kann aber 1-zu-1 mit einem realen
-                Datensatz übernommen werden.
+                <br />
+                Zur Demonstration, haben wir hier ein Modell zur Verfügung
+                gestellt, das in der Lage ist die Stimmung in kurzen Texten zu
+                erfassen. Das zu Grunde liegende Modell kann auch so verwendet
+                werden, dass längere Texte Satz für Satz analysiert werden.
               </p>
             </div>
           </div>
@@ -250,18 +249,9 @@ export default function BeachchairsPage({}) {
                   scrolling="no"
                   frameBorder="0"
                   className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-lg"
-                  src="https://ml-demo.stackocean.com/python-streamlit-docker-sample/"
+                  src="https://ml-demo.stackocean.com/sentiment-showcase/"
                 ></iframe>
               </div>
-            </div>
-          ) : activeView === "dataset" ? (
-            <div className="relative px-6 py-10 overflow-hidden bg-white shadow-xl rounded-2xl sm:px-12 sm:py-20">
-              <CsvToHtmlTable
-                data={data}
-                csvDelimiter=","
-                tableClassName="min-w-full divide-y divide-gray-300 bg-white overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg"
-                tableRowClassName="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
-              />
             </div>
           ) : null}
           <div className="relative px-4 py-4 mt-10 bg-white shadow-xl lg:px-8 rounded-2xl sm:px-12 sm:py-10">
@@ -271,7 +261,7 @@ export default function BeachchairsPage({}) {
                   Ähnliche Anwendungsfälle
                 </span>
                 <span className="block mt-2 text-3xl font-bold leading-8 tracking-tight text-center text-gray-900 sm:text-4xl">
-                  Produkt- und Produktionsvorhersagen
+                  Stimmungsanalyse mit KI
                 </span>
               </h2>
             </div>
@@ -282,17 +272,13 @@ export default function BeachchairsPage({}) {
               </p>
               <ul className="text-left list-disc">
                 <li>
-                  Vorhersage von Besucherzahlen für Museen, Freizeitparks oder
-                  regelmäßige Events
+                  Priorisierung und Bildung einer Reihenfolge im Kundensupport
                 </li>
+                <li>Erfassung von Mitarbeiterzufriedenheit aus Befragungen</li>
                 <li>
-                  Produktionsvorhersagen für eine Bäckerei (Vorhersage der
-                  verkauften Brötchen)
+                  Automatisierte Auswertung von Freitextfeldern in Umfragen
                 </li>
-                <li>
-                  Anzahl benötigter Servicekräfte für ein Restaurant oder
-                  Biergarten
-                </li>
+                <li>Feststellung von Meinungsentwicklung über Zeit</li>
                 <li>...</li>
               </ul>
             </div>
