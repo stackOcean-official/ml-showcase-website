@@ -253,7 +253,7 @@ export default function BeachchairsPage({}) {
                   />
                 </svg>
               </div>
-              <div className="relative w-full overflow-hidden h-156">
+              <div className="relative w-full overflow-hidden h-128">
                 <iframe
                   scrolling="no"
                   frameBorder="0"
