@@ -258,7 +258,7 @@ export default function BeachchairsPage({}) {
                   scrolling="no"
                   frameBorder="0"
                   className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-lg"
-                  src="https://ml-demo.stackocean.com/sentiment-showcase/"
+                  src="https://ml-demo-retoure.stackocean.com/"
                 ></iframe>
               </div>
             </div>
