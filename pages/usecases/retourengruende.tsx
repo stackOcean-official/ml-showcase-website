@@ -17,11 +17,11 @@ const CsvToHtmlTable: any = dynamic(
 );
 
 const meta = {
-  title: "Stimmungsanalyse",
+  title: "Retourengründe im Onlineshop",
   description:
-    "Was denken meine Kunden über mich? Wie kann ich das Stimmungsbild automatisiert erfassen oder verärgerte Kunden speziell betreuen?",
+    "Womit sind meine Kunden unzufrieden? Können Retourengründe automatisch von einer Maschine verstanden und klassifiziert werden, um ein objektives Bild zu bekommen?",
   image:
-    "https://images.unsplash.com/photo-1617440168937-c6497eaa8db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80&sat=-100",
+    "https://images.unsplash.com/photo-1624024193761-cf8d440208a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80&sat=-100",
 };
 
 const sampleData = `// @ts-ignore
@@ -79,7 +79,7 @@ export default function BeachchairsPage({}) {
                 </a>
               </div>
               <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                <Link href="https://github.com/stackOcean-official/sentiment-showcase">
+                <Link href="https://github.com/stackOcean-official/r-naive-bayes-showcase">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -96,7 +96,7 @@ export default function BeachchairsPage({}) {
         <div className="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
           <img
             className="absolute inset-0 object-cover w-full h-full"
-            src="https://images.unsplash.com/photo-1617440168937-c6497eaa8db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1679&q=80&sat=-100"
+            src="https://images.unsplash.com/photo-1615678857339-4e7e51ce22db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1679&q=80&sat=-100"
             alt=""
           />
           <div className="absolute inset-0 bg-gradient-to-r from-ocean-500 to-teal-600 mix-blend-multiply" />
@@ -112,25 +112,21 @@ export default function BeachchairsPage({}) {
                   Das Problem
                 </span>
                 <span className="block mt-2 text-3xl font-bold leading-8 tracking-tight text-center text-gray-900 sm:text-4xl">
-                  Markt und Meinungsforschung
+                  Wieso schicken meine Kunden ihre Produkte zurück?
                 </span>
               </h2>
             </div>
             <div className="mx-auto mt-6 prose prose-lg text-center text-gray-500 prose-ocean ">
               <p>
-                Es ist für jedes Unternehmen wichtig sich einen Marktvorteil zu
-                erarbeiten. Dies kann zum Beispiel dadurch geschehen, dass ein
-                Unternehmen weiß, wie gut die eigenen Produkte oder die Produkte
-                der Konkurrenz angenommen werden.
+                Wenn ein Kunde ein Produkt zurückschickt oder es schlecht
+                bewertet, ist es für das Unternehmen enorm wichtig
+                herauszufinden, womit genau der Kunde unzufrieden gewesen ist.
                 <br />
-                Die öffentliche Meinung zu Produkten ist beispielsweise in
-                Textdaten, die auf Social-Media Plattformen wie Twitter,
-                Facebook und Reddit veröffentlicht werden, enthalten.
-                <br />
-                Bei so großen Mengen an Textdaten ist es absolut
-                unwirtschaftlich, diese Daten manuell auszuwerten. Allerdings
-                können diese Textdaten als Input für eine Stimmungs- oder auf
-                Englisch Sentiment-Analyse verwendet werden.
+                Gerade im E-Commerce Bereich gibt es oft so viele Bewertungen
+                und Retourengründe, dass es gar nicht möglich ist, diese alle
+                persönlich durchzulesen und zu analysieren. Es braucht daher
+                eine Möglichkeit, die Texte der Kunden systematisch und
+                automatisiert auswerten zu können.
               </p>
             </div>
           </div>
@@ -141,22 +137,36 @@ export default function BeachchairsPage({}) {
                   Die Lösung
                 </span>
                 <span className="block mt-2 text-3xl font-bold leading-8 tracking-tight text-center text-gray-900 sm:text-4xl">
-                  Stimmungsanalyse mit KI
+                  Automatisierte Klassifizierung von Produkt-Bewertungen und
+                  Retourengründen
                 </span>
               </h2>
             </div>
             <div className="mx-auto mt-6 prose prose-lg text-center text-gray-500 prose-ocean">
               <p>
-                Mit einer Stimmungsanalyse ist es möglich, enorme Mengen an
-                Textdaten von einem KI Modell in kurzer Zeit auswerten zu lassen
-                - eine Auswertung für die ein Mensch im Zweifel mehrere Monate
-                oder Jahre brauchen würde.
+                Eine KI ist in der Lage, die Retourengründe automatisiert aus
+                Texten zu erfassen und Kommentare sowie Bewertungen zu
+                klassifizieren. Die Texte werden analysiert und zu Kategorien
+                zugeordnet. So hat man als Unternehmen einen objektiven
+                Überblick über die wichtigsten Probleme der Kunden und kann
+                gezielt dort nachbessern, wo es am dringendsten notwendig ist.
                 <br />
+                <br />
+                Mit einem Text-Classifier kann automatisiert erkannt werden, was
+                der Hintergrund einer bestimmten Retoure ist.
                 <br />
                 Zur Demonstration, haben wir hier ein Modell zur Verfügung
-                gestellt, das in der Lage ist die Stimmung in kurzen Texten zu
-                erfassen. Das zu Grunde liegende Modell kann auch so verwendet
-                werden, dass längere Texte Satz für Satz analysiert werden.
+                gestellt, das in der Lage ist, typische Beschwerden und negative
+                Bewertungen im E-Commerce für Schuhverkäufer zu kategorisieren.
+                Dazu haben wir als mögliche Beschwerdegründe die Kategorien
+                Qualität, Lieferung und Passform vorgegeben. (Diese Vorgaben
+                sind frei wählbar und wurden von uns im Trainingsprozess so
+                implementiert). Der Bereich der Schuhverkäufer ist nur ein
+                Anwendungsfall für das zugrunde liegende Modell.
+                <br />
+                Wenn Trainingsdaten aus einem ganz anderen Bereich vorliegen,
+                lässt sich das Modell auch für diese Fälle trainieren und kann
+                andere Kategorien klassifizieren.
               </p>
             </div>
           </div>
@@ -271,13 +281,10 @@ export default function BeachchairsPage({}) {
               </p>
               <ul className="text-left list-disc">
                 <li>
-                  Priorisierung und Bildung einer Reihenfolge im Kundensupport
+                  Mustererkennung in klassifizierten Produkt-Bewertungen und
+                  Retourengründen
                 </li>
-                <li>Erfassung von Mitarbeiterzufriedenheit aus Befragungen</li>
-                <li>
-                  Automatisierte Auswertung von Freitextfeldern in Umfragen
-                </li>
-                <li>Feststellung von Meinungsentwicklung über Zeit</li>
+                <li>Kommentare auf Social Media kategorisieren</li>
                 <li>...</li>
               </ul>
             </div>

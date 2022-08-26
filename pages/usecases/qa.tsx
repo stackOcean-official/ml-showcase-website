@@ -17,11 +17,11 @@ const CsvToHtmlTable: any = dynamic(
 );
 
 const meta = {
-  title: "Stimmungsanalyse",
+  title: "Wissen aus Berichten extrahieren",
   description:
-    "Was denken meine Kunden über mich? Wie kann ich das Stimmungsbild automatisiert erfassen oder verärgerte Kunden speziell betreuen?",
+    "Niemand liest gern lange und komplizierte Berichte im Unternehmen. Kann eine KI automatisiert die Informationen extrahieren, die man in dem Moment benötigt?",
   image:
-    "https://images.unsplash.com/photo-1617440168937-c6497eaa8db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80&sat=-100",
+    "https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80&sat=-100",
 };
 
 const sampleData = `// @ts-ignore
@@ -79,7 +79,7 @@ export default function BeachchairsPage({}) {
                 </a>
               </div>
               <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                <Link href="https://github.com/stackOcean-official/sentiment-showcase">
+                <Link href="https://github.com/stackOcean-official/qa-showcase">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -96,7 +96,7 @@ export default function BeachchairsPage({}) {
         <div className="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
           <img
             className="absolute inset-0 object-cover w-full h-full"
-            src="https://images.unsplash.com/photo-1617440168937-c6497eaa8db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1679&q=80&sat=-100"
+            src="https://images.unsplash.com/photo-1583521214690-73421a1829a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1679&q=80&sat=-100"
             alt=""
           />
           <div className="absolute inset-0 bg-gradient-to-r from-ocean-500 to-teal-600 mix-blend-multiply" />
@@ -112,25 +112,24 @@ export default function BeachchairsPage({}) {
                   Das Problem
                 </span>
                 <span className="block mt-2 text-3xl font-bold leading-8 tracking-tight text-center text-gray-900 sm:text-4xl">
-                  Markt und Meinungsforschung
+                  Wissen innerhalb Unternehmen ist nicht schnell zugänglich
                 </span>
               </h2>
             </div>
             <div className="mx-auto mt-6 prose prose-lg text-center text-gray-500 prose-ocean ">
               <p>
-                Es ist für jedes Unternehmen wichtig sich einen Marktvorteil zu
-                erarbeiten. Dies kann zum Beispiel dadurch geschehen, dass ein
-                Unternehmen weiß, wie gut die eigenen Produkte oder die Produkte
-                der Konkurrenz angenommen werden.
+                Niemand liest gern lange und komplizierte Berichte. Doch die
+                Liste solcher Berichte ist lang, mit denen man sich tagtäglich
+                beschäftigen muss. Seien es Protokolle aus verpassten oder
+                vergangenen Terminen, Auswertungen und Ergebnisse von externen
+                Dienstleistern oder der Abschlussbericht vergangener Projekte.
+                Auch AGBs, Verträge oder rechtliche Vorgaben sind unumgänglich
+                und müssen entsprechend studiert und gelesen werden. Oft sind
+                diese Berichte viele Seiten lang und so komplex, dass man nach 3
+                Sätzen schon wieder halb vergisst, was man eben gelesen hat.
                 <br />
-                Die öffentliche Meinung zu Produkten ist beispielsweise in
-                Textdaten, die auf Social-Media Plattformen wie Twitter,
-                Facebook und Reddit veröffentlicht werden, enthalten.
-                <br />
-                Bei so großen Mengen an Textdaten ist es absolut
-                unwirtschaftlich, diese Daten manuell auszuwerten. Allerdings
-                können diese Textdaten als Input für eine Stimmungs- oder auf
-                Englisch Sentiment-Analyse verwendet werden.
+                Wie wäre es, wenn man den Text stattdessen einfach nach dem, was
+                man wissen möchte, fragen könnte?
               </p>
             </div>
           </div>
@@ -141,22 +140,27 @@ export default function BeachchairsPage({}) {
                   Die Lösung
                 </span>
                 <span className="block mt-2 text-3xl font-bold leading-8 tracking-tight text-center text-gray-900 sm:text-4xl">
-                  Stimmungsanalyse mit KI
+                  Eine Frage-Antwort KI
                 </span>
               </h2>
             </div>
             <div className="mx-auto mt-6 prose prose-lg text-center text-gray-500 prose-ocean">
               <p>
-                Mit einer Stimmungsanalyse ist es möglich, enorme Mengen an
-                Textdaten von einem KI Modell in kurzer Zeit auswerten zu lassen
-                - eine Auswertung für die ein Mensch im Zweifel mehrere Monate
-                oder Jahre brauchen würde.
+                Frage-Antwort KIs können Fragen in natürlicher Sprache
+                entgegennehmen und suchen die Antwort aus einem gegebenen
+                Kontext, z.B. einer Sammlung von Dokumenten, heraus. Sie haben
+                ein semantisches Verständnis menschlicher Sprache und suchen
+                deswegen nicht nur nach Stichworten. So kann jede/r die
+                Antworten aus jeglichen Texten finden, ohne groß danach suchen
+                zu müssen.
                 <br />
+                Andere Frage-Antwort KIs können auch aus einem Kontext eigene
+                Antworten generieren und manche brauchen sogar keinen Kontext.
                 <br />
-                Zur Demonstration, haben wir hier ein Modell zur Verfügung
-                gestellt, das in der Lage ist die Stimmung in kurzen Texten zu
-                erfassen. Das zu Grunde liegende Modell kann auch so verwendet
-                werden, dass längere Texte Satz für Satz analysiert werden.
+                Unten haben wir ein Modell bereitgestellt, das aus einem kurzen
+                Text versucht, die Antwort für eine Frage zu extrahieren. Ein
+                kleines Beispiel ist gegeben, aber eigene Texte können gerne
+                ausprobiert werden.
               </p>
             </div>
           </div>
@@ -243,12 +247,12 @@ export default function BeachchairsPage({}) {
                   />
                 </svg>
               </div>
-              <div className="relative w-full overflow-hidden h-156">
+              <div className="relative w-full overflow-hidden h-192">
                 <iframe
                   scrolling="no"
                   frameBorder="0"
                   className="absolute top-0 left-0 w-full h-full overflow-hidden rounded-lg"
-                  src="https://ml-demo.stackocean.com/sentiment-showcase/"
+                  src="https://ml-demo.stackocean.com/qa-showcase/"
                 ></iframe>
               </div>
             </div>
@@ -260,7 +264,7 @@ export default function BeachchairsPage({}) {
                   Ähnliche Anwendungsfälle
                 </span>
                 <span className="block mt-2 text-3xl font-bold leading-8 tracking-tight text-center text-gray-900 sm:text-4xl">
-                  Stimmungsanalyse mit KI
+                  Frage-Antwort KI
                 </span>
               </h2>
             </div>
@@ -270,14 +274,11 @@ export default function BeachchairsPage({}) {
                 Problemstellungen übertragen.
               </p>
               <ul className="text-left list-disc">
+                <li>Automatische Erstellung von FAQs aus Supportdokumenten</li>
                 <li>
-                  Priorisierung und Bildung einer Reihenfolge im Kundensupport
+                  Ein Chatbot, der Mitarbeitern und Kunden schnell die richtige
+                  Antwort gibt
                 </li>
-                <li>Erfassung von Mitarbeiterzufriedenheit aus Befragungen</li>
-                <li>
-                  Automatisierte Auswertung von Freitextfeldern in Umfragen
-                </li>
-                <li>Feststellung von Meinungsentwicklung über Zeit</li>
                 <li>...</li>
               </ul>
             </div>
