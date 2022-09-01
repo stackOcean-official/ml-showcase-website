@@ -16,7 +16,7 @@ export default function Usecases() {
             Usecases
           </h2>
           <p className="max-w-2xl mx-auto mt-3 text-xl text-gray-500 sm:mt-4">
-            Einsatzgebiete von KI mit Beispielen
+            Einsatzgebiete von KI entdecken und verstehen
           </p>
         </div>
         <div className="grid max-w-lg gap-5 mx-auto mt-12 lg:grid-cols-3 lg:max-w-none">
