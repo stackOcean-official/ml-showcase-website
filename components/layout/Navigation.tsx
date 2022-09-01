@@ -57,14 +57,14 @@ export default function Navigation({}) {
               </a>
             </Link>
           </div>
-          {/* <div className="-my-2 -mr-2 md:hidden">
+          <div className="-my-2 -mr-2 md:hidden">
             <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-ocean-500">
               <span className="sr-only">Open menu</span>
               <MenuIcon className="w-6 h-6" aria-hidden="true" />
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-            <Popover className="relative">
+            {/* <Popover className="relative">
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -123,27 +123,25 @@ export default function Navigation({}) {
                   </Transition>
                 </>
               )}
-            </Popover>
+            </Popover> */}
 
-            <a
+            <Link href="/">
+              <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                Start
+              </a>
+            </Link>
+            <Link href="/usecases">
+              <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                Usecases
+              </a>
+            </Link>
+            {/* <a
               href="#"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
-              Pricing
-            </a>
-            <a
-              href="#"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Partners
-            </a>
-            <a
-              href="#"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Company
-            </a>
-          </Popover.Group>*/}
+              KI verstehen
+            </a> */}
+          </Popover.Group>
           <div className="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
             <a
               href="mailto:hello@stackocean.com"
@@ -174,7 +172,7 @@ export default function Navigation({}) {
                   <div>
                     <img
                       className="w-auto h-8"
-                      src="https://tailwindui.com/img/logos/workflow-mark-cyan-600-to-ocean-600.svg"
+                      src="/img/icon.svg"
                       alt="Workflow"
                     />
                   </div>
@@ -205,39 +203,38 @@ export default function Navigation({}) {
                 </div> */}
               </div>
               <div className="px-5 py-6">
-                {/* <div className="grid grid-cols-2 gap-4">
-                  <a
-                    href="#"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
-                    Pricing
-                  </a>
-                  <a
-                    href="#"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
-                    Partners
-                  </a>
-                  <a
+                <div className="grid grid-cols-2 gap-4">
+                  <Link href="/">
+                    <a className="text-base font-medium text-gray-900 hover:text-gray-700">
+                      Start
+                    </a>
+                  </Link>
+                  <Link href="/usecases">
+                    <a
+                      href="#"
+                      className="text-base font-medium text-gray-900 hover:text-gray-700"
+                    >
+                      Usecases
+                    </a>
+                  </Link>
+                  {/*  <a
                     href="#"
                     className="text-base font-medium text-gray-900 hover:text-gray-700"
                   >
                     Company
-                  </a>
-                </div> */}
+                  </a> */}
+                </div>
                 <div className="mt-6">
                   <a
-                    href="#"
+                    href="mailto:hello@stackocean.com"
                     className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white border border-transparent rounded-md shadow-sm bg-gradient-to-r from-cyan-600 to-ocean-600 bg-origin-border hover:from-cyan-700 hover:to-ocean-700"
                   >
-                    Sign up
+                    <MailIcon
+                      className="w-5 h-5 mr-2 -ml-1"
+                      aria-hidden="true"
+                    />
+                    Kontakt
                   </a>
-                  <p className="mt-6 text-base font-medium text-center text-gray-500">
-                    Existing customer?
-                    <a href="#" className="text-gray-900">
-                      Sign in
-                    </a>
-                  </p>
                 </div>
               </div>
             </div>

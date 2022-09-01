@@ -2,9 +2,7 @@ import Link from "next/link";
 import { BsLinkedin } from "react-icons/bs";
 
 const footerNavigation = {
-  usecases: [
-    { name: "Strandkorb-Buchungsvorhersage", href: "/usecases/beachchairs" },
-  ],
+  ki: [{ name: "Usecases", href: "/usecases" }],
   company: [
     { name: "Website", href: "https://stackocean.com/" },
     { name: "Blog", href: "https://stackocean.com/blog/" },
@@ -33,10 +31,10 @@ export default function Footer({}) {
           <div className="grid grid-cols-2 gap-8 xl:col-span-2">
             <div>
               <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
-                Usecases
+                Künstliche Intelligenz
               </h3>
               <ul role="list" className="mt-4 space-y-4">
-                {footerNavigation.usecases.map((item) => (
+                {footerNavigation.ki.map((item) => (
                   <li key={item.name}>
                     <a
                       href={item.href}
@@ -87,7 +85,7 @@ export default function Footer({}) {
             </div>
           </div>
           <div className="mt-12 xl:mt-0">
-            <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase mb-6">
+            <h3 className="mb-6 text-sm font-semibold tracking-wider text-gray-400 uppercase">
               Gefördert von
             </h3>
             <img
