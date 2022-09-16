@@ -7,7 +7,7 @@ import Navigation from "../components/layout/Navigation";
 import CallToAction from "../components/shared/CallToAction";
 import { getPosts } from "../lib/posts";
 
-const HomePage: NextPage = ({ posts }) => {
+function HomePage({ posts }: any) {
   return (
     <div className="bg-white">
       <Navigation />
@@ -105,7 +105,7 @@ const HomePage: NextPage = ({ posts }) => {
       <Footer />
     </div>
   );
-};
+}
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const posts = await getPosts();
