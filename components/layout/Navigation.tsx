@@ -1,44 +1,8 @@
 import { Popover, Transition } from "@headlessui/react";
-import {
-  AnnotationIcon,
-  ChatAlt2Icon,
-  InboxIcon,
-  MenuIcon,
-  QuestionMarkCircleIcon,
-  XIcon,
-} from "@heroicons/react/outline";
-import { ChevronDownIcon, MailIcon } from "@heroicons/react/solid";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { MailIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import { Fragment } from "react";
-import { classNames } from "../../lib/utils";
-
-const solutions = [
-  {
-    name: "Inbox",
-    description:
-      "Get a better understanding of where your traffic is coming from.",
-    href: "#",
-    icon: InboxIcon,
-  },
-  {
-    name: "Messaging",
-    description: "Speak directly to your customers in a more meaningful way.",
-    href: "#",
-    icon: AnnotationIcon,
-  },
-  {
-    name: "Live Chat",
-    description: "Your customers' data will be safe and secure.",
-    href: "#",
-    icon: ChatAlt2Icon,
-  },
-  {
-    name: "Knowledge Base",
-    description: "Connect with third-party tools that you're already using.",
-    href: "#",
-    icon: QuestionMarkCircleIcon,
-  },
-];
 
 export default function Navigation({}) {
   return (
@@ -135,6 +99,11 @@ export default function Navigation({}) {
                 Usecases
               </a>
             </Link>
+            <Link href="/kiverstehen">
+              <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                KI verstehen
+              </a>
+            </Link>
             {/* <a
               href="#"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
@@ -210,11 +179,13 @@ export default function Navigation({}) {
                     </a>
                   </Link>
                   <Link href="/usecases">
-                    <a
-                      href="#"
-                      className="text-base font-medium text-gray-900 hover:text-gray-700"
-                    >
+                    <a className="text-base font-medium text-gray-900 hover:text-gray-700">
                       Usecases
+                    </a>
+                  </Link>
+                  <Link href="/kiverstehen">
+                    <a className="text-base font-medium text-gray-900 hover:text-gray-700">
+                      KI verstehen
                     </a>
                   </Link>
                   {/*  <a
