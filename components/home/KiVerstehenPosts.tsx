@@ -1,10 +1,9 @@
 /* This example requires Tailwind CSS v2.0+ */
 
 import Link from "next/link";
-import { usecases } from "../../lib/usecases";
-import UsecaseTile from "../shared/UsecaseTile";
+import PostTile from "../shared/PostTile";
 
-export default function Usecases() {
+export default function KiVerstehenPosts({ posts }: any) {
   return (
     <div className="relative px-4 pt-16 pb-15 bg-gray-50 sm:px-6 lg:pt-24 lg:pb-20 lg:px-8">
       <div className="absolute inset-0">
@@ -13,21 +12,21 @@ export default function Usecases() {
       <div className="relative mx-auto max-w-7xl">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            Usecases
+            KI verstehen
           </h2>
           <p className="max-w-2xl mx-auto mt-3 text-xl text-gray-500 sm:mt-4">
-            Einsatzgebiete von KI entdecken und verstehen
+            Konzepte und Begriffe lernen und verstehen
           </p>
         </div>
         <div className="grid max-w-lg gap-5 mx-auto mt-12 lg:grid-cols-3 lg:max-w-none">
-          {usecases.slice(0, 3).map((usecase) => (
-            <UsecaseTile key={usecase.title} usecase={usecase} />
+          {posts.slice(0, 3).map((post: any) => (
+            <PostTile key={post.title} post={post} />
           ))}
         </div>
         <div className="flex mt-10">
-          <Link href="/usecases">
+          <Link href="/kiverstehen">
             <a className="font-bold text-md text-ocean-800 hover:text-ocean-600">
-              Alle Usecases anschauen
+              Alle Beiträge anschauen
               <span aria-hidden="true"> &rarr;</span>
             </a>
           </Link>

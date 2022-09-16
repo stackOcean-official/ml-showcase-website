@@ -1,11 +1,13 @@
 import { MailIcon } from "@heroicons/react/solid";
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
+import KiVerstehenPosts from "../components/home/KiVerstehenPosts";
 import Usecases from "../components/home/Usecases";
 import Footer from "../components/layout/Footer";
 import Navigation from "../components/layout/Navigation";
 import CallToAction from "../components/shared/CallToAction";
+import { getPosts } from "../lib/posts";
 
-const HomePage: NextPage = () => {
+const HomePage: NextPage = ({ posts }) => {
   return (
     <div className="bg-white">
       <Navigation />
@@ -94,11 +96,29 @@ const HomePage: NextPage = () => {
           <Usecases />
         </div>
 
+        <div id="posts">
+          <KiVerstehenPosts posts={posts} />
+        </div>
+
         <CallToAction />
       </main>
       <Footer />
     </div>
   );
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const posts = await getPosts();
+
+  if (!posts) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: { posts },
+  };
 };
 
 export default HomePage;
